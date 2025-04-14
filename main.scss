@@ -1,10 +1,8 @@
-// Déclaration des variables
 $gold-color: #FFD700;
 $black-color: #000;
 $dark-color: #111;
 $transition-speed: 0.3s;
 
-// Reset global
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,19 +11,19 @@ $transition-speed: 0.3s;
 
 body {
   background-color: $black-color;
-  color: $gold-color; // Exemple : on applique le gold par défaut
+  color: $gold-color; 
   font-family: Impact, Charcoal, sans-serif;
   line-height: 1.6;
 }
 
-// Container central
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 
-// HEADER
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -55,7 +53,7 @@ body {
   }
 }
 
-// HERO
+
 .hero {
   display: flex;
   align-items: center;
@@ -78,7 +76,6 @@ body {
   }
 }
 
-// ABOUT
 .about {
   padding: 2rem;
   
@@ -94,7 +91,7 @@ body {
   }
 }
 
-// PROJECTS
+
 .projects {
   padding: 2rem;
   
@@ -105,7 +102,7 @@ body {
   }
 }
 
-// Grille des projets
+
 .grid-projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -113,12 +110,12 @@ body {
   padding: 2rem;
 }
 
-// Cartes des projets
+
 .project-card {
-  background: $dark-color; // Fond sombre pour les cartes
+  background: $dark-color; 
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5); // Ombre en teinte jaune
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5); 
   transition: transform $transition-speed ease;
   color: $gold-color;
 
@@ -133,7 +130,6 @@ body {
   }
 }
 
-// CONTACT
 .contact {
   padding: 2rem;
   
@@ -149,7 +145,6 @@ body {
   }
 }
 
-// FOOTER
 .footer {
   padding: 1rem 2rem;
   text-align: center;
@@ -157,7 +152,6 @@ body {
   color: $gold-color;
 }
 
-// RESPONSIVE
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -188,20 +182,20 @@ body {
   }
 
   #mlgMeme {
-    position: fixed; /* Fixé sur l'écran */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Couvre toute la hauteur de la page */
+    height: 100vh; 
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0); /* Fond semi-transparent noir */
-    z-index: 9999; /* Pour qu'il apparaisse par-dessus tout */
+    background-color: rgba(0, 0, 0, 0); 
+    z-index: 9999; 
   }
 
   #mlgMeme img {
-    object-fit: contain; /* Le gif garde son ratio sans être déformé */
+    object-fit: contain; 
   }
 
   #scrollMeme {
