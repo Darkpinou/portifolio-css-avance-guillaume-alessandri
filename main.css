@@ -152,21 +152,21 @@ body {
 }
 
 #mlgMeme {
-  position: fixed; /* Fixé sur l'écran */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Couvre toute la hauteur de la page */
+  height: 100vh; 
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0); /* Fond semi-transparent noir */
-  z-index: 9999; /* Pour qu'il apparaisse par-dessus tout */
+  background-color: rgba(0, 0, 0, 0); 
+  z-index: 9999; 
 }
 
 #mlgMeme img {
   -o-object-fit: contain;
-     object-fit: contain; /* Le gif garde son ratio sans être déformé */
+     object-fit: contain; 
 }
 
 #scrollMeme {
