@@ -1,0 +1,185 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: #FFD700;
+  font-family: Impact, Charcoal, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 75px;
+  height: 75px;
+}
+.header .nav {
+  display: flex;
+  gap: 2rem;
+}
+.header .nav div {
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #FFD700;
+}
+.header .nav div:hover {
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+  background-color: #000;
+}
+.hero .hero-content .title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+.hero .hero-content .subtitle {
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+.about {
+  padding: 2rem;
+}
+.about .section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+.about .about-content {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.projects {
+  padding: 2rem;
+}
+.projects .section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.grid-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.project-card {
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+  transition: transform 0.3s ease;
+  color: #FFD700;
+}
+.project-card img {
+  height: 8.5rem;
+  width: 13rem;
+  border-radius: 5%;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact {
+  padding: 2rem;
+}
+.contact .section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+.contact .contact-content {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer {
+  padding: 1rem 2rem;
+  text-align: center;
+  background: #111;
+  color: #FFD700;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero-content {
+    padding: 0 1rem;
+  }
+}
+#mlgButton {
+  background-color: #FFD700;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff0000;
+}
+
+#mlgMeme {
+  position: fixed; /* Fixé sur l'écran */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Couvre toute la hauteur de la page */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0); /* Fond semi-transparent noir */
+  z-index: 9999; /* Pour qu'il apparaisse par-dessus tout */
+}
+
+#mlgMeme img {
+  -o-object-fit: contain;
+     object-fit: contain; /* Le gif garde son ratio sans être déformé */
+}
+
+#scrollMeme {
+  position: fixed;
+  bottom: 50px;
+  left: -300px;
+  width: 200px;
+  opacity: 0;
+  transition: left 2s ease, opacity 0.3s;
+  z-index: 9999;
+}
+
+#scrollMeme.show {
+  left: 100%;
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */

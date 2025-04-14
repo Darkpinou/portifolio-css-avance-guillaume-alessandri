@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Du Plus Beau</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="Logo.png" alt="Ma tete de cul">
+      </div>
+      <div class="nav">
+        <div class="acceuil">
+            <h2>Acceuil du fiak</h2>
+
+        </div>
+        <div class="à_props">
+            <h2>A Propos du Seigneur</h2>
+
+        </div>
+        <div class="Hassoul">
+            <h2>Hassoul</h2>
+
+        </div>
+        <div class="Wolla je sais pa">
+            <H2><button id="mlgButton">Clique Pas...</button></H2>
+
+            <div id="mlgMeme" style="display: none; text-align: center;">
+                <img src="MLG_doritos.gif" alt="MLG Meme" width="400" />
+            </div>
+            <div id="mlgaudio" style="display: none; text-align: center;">
+                <audio id="mlgAudio" src="MLG_doritos.mp3"></audio>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-content">
+        <div class="title">
+
+
+        </div>
+
+        <div class="subtitle">
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="about">
+      <div class="section-title">
+
+
+      </div>
+      <div class="about-content">
+        
+      </div>
+    </div>
+
+    <div class="projects">
+      <div class="section-title">Mes Projets</div>
+
+      <div class="grid-projects">
+
+        <div class="project-card">
+            <img src="Bombardino.jpg" alt="un aligator très méchant">
+
+        </div>
+        <div class="project-card">
+            <img src="Ballerina.jpg" alt="Ballerina Capuchina">
+
+        </div>
+        <div class="project-card">
+            <img src="Tung.jpg" alt="Tung Tung Tung Tung Tung Tung Tung Tung Tung Tung Tung  sahur">
+
+        </div>
+        <div class="project-card">
+            <img src="Larry.jpg" alt="Il va venir te toucher la nuit...">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact-content">Formulaire ou infos de contact
+
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>&copy; 2025 Guillaume</div>
+    </div>
+  </div>
+
+
+<script>
+    const mlgButton = document.getElementById('mlgButton');
+    const mlgMeme = document.getElementById('mlgMeme');
+    const mlgAudio = document.getElementById('mlgAudio');
+    const mlgGif = mlgMeme.querySelector('img'); // Récupérer l'élément img
+  
+    mlgButton.addEventListener('click', () => {
+      if (mlgMeme.style.display === 'none') {
+        mlgMeme.style.display = 'block';
+        mlgAudio.currentTime = 0;
+        mlgAudio.play();
+        mlgGif.style.width = "100%";  // Prendre toute la largeur de l'écran
+        mlgGif.style.height = "100vh"; // Prendre toute la hauteur de l'écran
+  
+        // Masquer après 9 secondes
+        setTimeout(() => {
+          mlgMeme.style.display = 'none';
+          mlgAudio.pause();
+          mlgAudio.currentTime = 0;
+        }, 9000); // 9000 ms = 9 secondes
+      } else {
+        mlgMeme.style.display = 'none';
+        mlgAudio.pause();
+        mlgAudio.currentTime = 0;
+      }
+    });
+</script>
+
+<img id="scrollMeme" src="wtc.jpg" alt="Antoine daniel le plus beau wsh " />
+
+<script>
+    let triggered = false;
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const winHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+  
+      if (scrollTop + winHeight >= docHeight - 5) {
+        window.addEventListener("wheel", onOverScroll);
+      }
+    });
+  
+    function onOverScroll(e) {
+      if (e.deltaY > 0 && !triggered) {
+        const img = document.getElementById("scrollMeme");
+        img.classList.add("show");
+        triggered = true;
+  
+        setTimeout(() => {
+          img.classList.remove("show");
+          triggered = false;
+        }, 2000);
+  
+        window.removeEventListener("wheel", onOverScroll);
+      }
+    }
+</script>
+
+</body>
+</html>
