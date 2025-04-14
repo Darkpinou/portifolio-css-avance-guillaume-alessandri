@@ -114,15 +114,15 @@
         mlgMeme.style.display = 'block';
         mlgAudio.currentTime = 0;
         mlgAudio.play();
-        mlgGif.style.width = "100%";  // Prendre toute la largeur de l'écran
-        mlgGif.style.height = "100vh"; // Prendre toute la hauteur de l'écran
+        mlgGif.style.width = "100%";  
+        mlgGif.style.height = "100vh"; 
   
-        // Masquer après 9 secondes
+        
         setTimeout(() => {
           mlgMeme.style.display = 'none';
           mlgAudio.pause();
           mlgAudio.currentTime = 0;
-        }, 9000); // 9000 ms = 9 secondes
+        }, 9000); 
       } else {
         mlgMeme.style.display = 'none';
         mlgAudio.pause();
